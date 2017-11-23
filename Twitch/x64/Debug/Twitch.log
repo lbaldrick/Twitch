@@ -1,0 +1,2 @@
+﻿Texture.obj : error LNK2019: unresolved external symbol SOIL_load_OGL_texture referenced in function "public: __cdecl Texture::Texture(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Texture@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+C:\Users\lbaldrick\source\repos\Twitch\x64\Debug\Twitch.exe : fatal error LNK1120: 1 unresolved externals

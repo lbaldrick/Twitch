@@ -4,8 +4,10 @@
 #include "GLFW\glfw3.h"
 #include "SOIL\src\SOIL.h"
 
-#include<string>
-#include<iostream>
+#pragma comment(lib, "SOIL.lib")
+
+#include <string>
+#include <iostream> 
 
 using namespace std;
 

@@ -1,5 +1,10 @@
-﻿  Engine.cpp
+﻿  Mouse.cpp
+  Sprite.cpp
+c:\users\lbaldrick\source\repos\twitch\twitch\engine\graphics\sprite.cpp(45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\lbaldrick\source\repos\twitch\twitch\engine\graphics\sprite.cpp(46): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\lbaldrick\source\repos\twitch\twitch\engine\graphics\sprite.cpp(47): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
   Generating Code...
-  Skipping... (no relevant changes detected)
+  Compiling...
   Twitch.cpp
+  Generating Code...
   Twitch.vcxproj -> C:\Users\lbaldrick\source\repos\Twitch\Debug\Twitch.exe

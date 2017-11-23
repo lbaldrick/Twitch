@@ -22,6 +22,9 @@ public:
 	void update();
 	void render();
 
+	void beginRender();
+	void endRender();
+
 private:
 	static GLFWwindow* window;
 };

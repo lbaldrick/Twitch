@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include "IO/Mouse.h"
 
 int Engine::SCREEN_HEIGHT = 768;
 int Engine::SCREEN_WIDTH = 1024;
@@ -31,9 +32,12 @@ bool Engine::initialize(char* windowTitle) {
 	glfwGetFramebufferSize(window, &width, &height);
 	glfwSwapInterval(1);
 
+	glfwSetCursorPosCallback(window, Mouse::posCallback);
+	glfwSetMouseButtonCallback(window, Mouse::buttonCallback);
+
 	const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
-	int xPos = (mode->width - SCREEN_WIDTH / 2); // get x centre of screen
-	int yPos = (mode->height - SCREEN_HEIGHT / 2); // get y centre of screen
+	int xPos = (mode->width - SCREEN_WIDTH)/ 2; // get x centre of screen
+	int yPos = (mode->height - SCREEN_HEIGHT) / 2; // get y centre of screen
 
 	glfwSetWindowPos(window, xPos, yPos);
 
@@ -60,11 +64,13 @@ void Engine::update() {
 	glfwPollEvents();
 }
 
-void Engine::render() {
+void Engine::beginRender() {
 
 	glClearColor(0, 1, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
 
+void Engine::endRender() {
 	// swap buffer because glfw uses double buffering on at fore front other in background
 	glfwSwapBuffers(window);
 }

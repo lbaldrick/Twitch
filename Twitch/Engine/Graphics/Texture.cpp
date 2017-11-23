@@ -14,7 +14,7 @@ Texture::Texture(int _id)
 }
 
 Texture::Texture(string path) {
-	id = SOIL_load_OGL_texture(path.c_str, SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_MULTIPLY_ALPHA);
+	id = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_INVERT_Y);
 
 	if (!getTextureParams()) {
 		cout << "Error loading image: " << path << endl;
@@ -31,4 +31,16 @@ bool Texture::getTextureParams() {
 	}
 
 	return false;
+}
+
+int Texture::getId() {
+	return id;
+}
+
+int Texture::getWidth() {
+	return width;
+}
+
+int Texture::getHeight() {
+	return height;
 }
